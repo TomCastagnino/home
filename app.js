@@ -52,7 +52,7 @@ app.use(function(req, res, next) {
 app.use(homeRoutes);
 app.use(indexRoutes);
 app.use(birreriaRoutes);
-app.use("/birreria/birrerias/:id/comments", commentRoutes);
+app.use("/a/birrerias/:id/comments", commentRoutes);
 
 
 ////////////////////////////////////////////////////
