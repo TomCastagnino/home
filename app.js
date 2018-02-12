@@ -5,14 +5,15 @@ var express         = require("express"),
     flash           = require("connect-flash"),
     passport        = require("passport"),
     LocalStrategy   = require("passport-local"),
-    Birreria      = require("./birreria/models/birreria"),
+    Birreria        = require("./birreria/models/birreria"),
     Comment         = require("./birreria/models/comment"),
     User            = require("./birreria/models/user"),
     methodOverride  = require("method-override");
     
-var commentRoutes       = require("./birreria/routes/comments"),
-    birreriaRoutes    = require("./birreria/routes/birrerias"),
-    indexRoutes         = require("./birreria/routes/index");
+var commentRoutes   = require("./birreria/routes/comments"),
+    birreriaRoutes  = require("./birreria/routes/birrerias"),
+    indexRoutes     = require("./birreria/routes/index"),
+    homeRoutes      = require("./routes/index");
  
 
 mongoose.connect(process.env.DATABASEURL);
@@ -48,6 +49,7 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.use(homeRoutes);
 app.use(indexRoutes);
 app.use(birreriaRoutes);
 app.use("/birreria/birrerias/:id/comments", commentRoutes);
