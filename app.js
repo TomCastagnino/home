@@ -13,9 +13,9 @@ var express         = require("express"),
 var commentRoutes       = require("./birreria/routes/comments"),
     birreriaRoutes    = require("./birreria/routes/birrerias"),
     indexRoutes         = require("./birreria/routes/index");
+ 
 
-//mongoose.connect("mongodb://localhost/yelp_camp_v6");
-mongoose.connect("mongodb://tcastagnino:gskg23dFFsfwA@ds039010.mlab.com:39010/yelpcamp");
+mongoose.connect(process.env.DATABASEURL);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");

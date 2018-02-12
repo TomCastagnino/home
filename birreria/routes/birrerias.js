@@ -49,7 +49,7 @@ router.get("/a/birrerias/:id", function(req, res) {
         if(err) {
             console.log(err);
         } else {
-            res.render("../views/birrerias/show", {campground: foundedBirreria});
+            res.render("../views/birrerias/show", {birreria: foundedBirreria});
         }
     });
 });
@@ -60,7 +60,7 @@ router.get("/a/birrerias/:id/edit", middleware.checkBirreriaOwnership, function(
         if (err) {
             res.redirect("/a/birrerias");
         } else {
-            res.render("../views/birrerias/edit", {campground: foundedBirreria});
+            res.render("../views/birrerias/edit", {birreria: foundedBirreria});
         }
     });
 });
