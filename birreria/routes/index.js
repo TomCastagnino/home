@@ -9,8 +9,8 @@ var express     = require("express"),
 //ROOT ROUTES
 /////////////
 
-router.get("/", function(req, res) {
-    res.render("../views/home");
+router.get("/a", function(req, res) {
+    res.render("../views/landing");
 });
 
 
@@ -18,11 +18,11 @@ router.get("/", function(req, res) {
 //AUTH ROUTES
 /////////////
 
-router.get("/register", function(req, res) {
+router.get("/a/register", function(req, res) {
     res.render("../views/register");
 });
 
-router.post("/register", function(req, res) {
+router.post("/a/register", function(req, res) {
     var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user) {
         if (err) {
@@ -31,7 +31,7 @@ router.post("/register", function(req, res) {
         }
         passport.authenticate("local")(req, res, function() {
             req.flash("success", "Bienvenido, " + user.username);
-            res.redirect("/campgrounds");
+            res.redirect("/a/birrerias");
         });
     });
 });
@@ -41,21 +41,21 @@ router.post("/register", function(req, res) {
 //LOGIN/OUT ROUTES
 //////////////////
 
-router.get("/login", function(req, res) {
+router.get("/a/login", function(req, res) {
     res.render("../views/login"); 
 });
 
-router.post("/login", passport.authenticate("local", {
-    successRedirect: "/campgrounds",
-    failureRedirect: "/login"
+router.post("/a/login", passport.authenticate("local", {
+    successRedirect: "/a/birrerias",
+    failureRedirect: "/a/login"
 }), function(req, res) {
     
 });
 
-router.get("/logout", function(req, res) {
+router.get("/a/logout", function(req, res) {
     req.logout();
     req.flash("success", "Hasta la próxima!");
-    res.redirect("/campgrounds");
+    res.redirect("/a/birrerias");
 });
 
 

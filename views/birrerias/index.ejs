@@ -6,7 +6,7 @@
       <h1>Bienvenidos a la Birrería!</h1>
       <p>Visite las mejores cervecerías de Buenos Aires</p>
       <p>
-          <a class="btn btn-primary btn-lg" href="/campgrounds/new">Agregar una cervecería</a>
+          <a class="btn btn-primary btn-lg" href="/a/birrerias/new">Agregar una cervecería</a>
       </p>
     </div>
   </header>
@@ -16,15 +16,15 @@
       <h3>Cervecerías más populares</h3>
     </div>
 
-    <% campgrounds.forEach(function(campground) { %>
+    <% birrerias.forEach(function(birreria) { %>
           <div class="col-md-3 col-sm-6">
             <div class="thumbnail">
-              <image src=<%=campground.image%>></image>
+              <image src=<%=birreria.image%>></image>
               <div class="caption">
-                <h4> <%= campground.name %> </h4>
+                <h4> <%= birreria.name %> </h4>
               </div>
               <p>
-                <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">Más Info</a>
+                <a href="/a/birrerias/<%=birreria._id%>" class="btn btn-primary">Más Info</a>
               </p>
             </div>
             

@@ -5,13 +5,13 @@ var express         = require("express"),
     flash           = require("connect-flash"),
     passport        = require("passport"),
     LocalStrategy   = require("passport-local"),
-    Campground      = require("./birreria/models/campground"),
+    Birreria      = require("./birreria/models/birreria"),
     Comment         = require("./birreria/models/comment"),
     User            = require("./birreria/models/user"),
     methodOverride  = require("method-override");
     
 var commentRoutes       = require("./birreria/routes/comments"),
-    campgroundRoutes    = require("./birreria/routes/campgrounds"),
+    birreriaRoutes    = require("./birreria/routes/birrerias"),
     indexRoutes         = require("./birreria/routes/index");
 
 //mongoose.connect("mongodb://localhost/yelp_camp_v6");
@@ -49,8 +49,8 @@ app.use(function(req, res, next) {
 });
 
 app.use(indexRoutes);
-app.use(campgroundRoutes);
-app.use("/birreria/campgrounds/:id/comments", commentRoutes);
+app.use(birreriaRoutes);
+app.use("/birreria/birrerias/:id/comments", commentRoutes);
 
 
 ////////////////////////////////////////////////////

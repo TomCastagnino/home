@@ -1,7 +1,7 @@
 
 var express     = require("express"),
     router      = express.Router({mergeParams: true}),
-    Campground  = require("../models/campground"),
+    Birreria  = require("../models/birreria"),
     Comment     = require("../models/comment"),
     middleware  = require("../middleware");
 
@@ -12,20 +12,20 @@ var express     = require("express"),
 
 //NEW
 router.get("/new", middleware.isLoggedIn, function(req, res) {
-    Campground.findById(req.params.id, function(err, campground) {
+    Birreria.findById(req.params.id, function(err, birreria) {
         if (err) {
             console.log(err);
         } else {
-            res.render("../views/comments/new", {campground: campground});
+            res.render("../views/comments/new", {birreria: birreria});
         }
     });
 });
 
 //CREATE
 router.post("/", middleware.isLoggedIn, function(req, res) {
-    Campground.findById(req.params.id, function(err, campground) {
+    Birreria.findById(req.params.id, function(err, birreria) {
         if (err) {
-       res.redirect("/campgrounds");
+       res.redirect("/a/birrerias");
         } else {
             Comment.create(req.body.comment, function(err, comment) {
                 if (err) {
@@ -34,10 +34,10 @@ router.post("/", middleware.isLoggedIn, function(req, res) {
                     comment.author.id = req.user._id;
                     comment.author.username = req.user.username;
                     comment.save();
-                    campground.comments.push(comment._id);
-                    campground.save();
+                    birreria.comments.push(comment._id);
+                    birreria.save();
                     req.flash("success", "Comentario agregado!");
-                    res.redirect("/campgrounds/" + campground._id);
+                    res.redirect("/a/birrerias/" + birreria._id);
                 }
             });
         }
@@ -50,7 +50,7 @@ router.get("/:comment_id/edit", middleware.checkCommentOwnership, function(req, 
         if (err) {
             res.redirect("back");
         } else {
-            res.render("../views/comments/edit", {campground_id: req.params.id, comment: foundComment});
+            res.render("../views/comments/edit", {birreria_id: req.params.id, comment: foundComment});
         }
     });
 });
@@ -61,7 +61,7 @@ router.put("/:comment_id", middleware.checkCommentOwnership, function(req, res) 
        if (err) {
            res.redirect("back");
        } else {
-           res.redirect("/campgrounds/" + req.params.id);
+           res.redirect("/a/birrerias/" + req.params.id);
        }
     });
 });
@@ -73,7 +73,7 @@ router.delete("/:comment_id", middleware.checkCommentOwnership, function(req, re
             res.redirect("back");
         } else {
             req.flash("success", "Comentario borrado!");
-            res.redirect("/campgrounds/" + req.params.id);
+            res.redirect("/a/birrerias/" + req.params.id);
         }
     });
 });

@@ -8,22 +8,22 @@
                 width="350"
                 height="400"
                 frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDF3yepgEz8F5eIHskQTl6HgbhlYxWcLLM&q=<%=campground.direccion%>" allowfullscreen>
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDF3yepgEz8F5eIHskQTl6HgbhlYxWcLLM&q=<%=birreria.direccion%>" allowfullscreen>
 </iframe>
         </div>
         <div class="col-md-8">
             <div class="thumbnail">
-                <img class="image-responsive" src="<%= campground.image %>">
+                <img class="image-responsive" src="<%= birreria.image %>">
                 <div class="caption caption-full">
-                    <h4 class="pull-right"><%=campground.price %>$ la pinta</h4>
-                    <h4><a><%= campground.name %></a></h4>
-                    <p><%=campground.description%></p>
+                    <h4 class="pull-right"><%=birreria.price %>$ la pinta</h4>
+                    <h4><a><%= birreria.name %></a></h4>
+                    <p><%=birreria.description%></p>
                     <p>
-                        <em>Es un aporte de <%= campground.author.username %></em>
+                        <em>Es un aporte de <%= birreria.author.username %></em>
                     </p>
-                    <%if(currentUser && campground.author.id.equals(currentUser._id)) { %>
-                        <a class="btn btn-warning" href="/campgrounds/<%=campground._id%>/edit">Editar</a>
-                        <form class="delete-form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+                    <%if(currentUser && birreria.author.id.equals(currentUser._id)) { %>
+                        <a class="btn btn-warning" href="/a/birrerias/<%=birreria._id%>/edit">Editar</a>
+                        <form class="delete-form" action="/a/birrerias/<%=birreria._id%>?_method=DELETE" method="POST">
                             <button class="btn btn-danger">Borrar</button>
                         </form>
                     <% } %>
@@ -31,10 +31,10 @@
             </div>
             <div class="well">
                 <div class="text-right">
-                    <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Agregar un comentario</a>
+                    <a class="btn btn-success" href="/a/birrerias/<%= birreria._id %>/comments/new">Agregar un comentario</a>
                 </div>
                 <hr>
-                <%campground.comments.forEach(function(comment) { %>
+                <%birreria.comments.forEach(function(comment) { %>
                     <div class="row">
                         <div class="col-md-12">
                             <strong><%= comment.author.username %></strong>
@@ -43,8 +43,8 @@
                                 <%=comment.text %>
                             </p>
                             <%if(currentUser && comment.author.id.equals(currentUser._id)) { %>
-                               <a class="btn btn-xs btn-warning" href="/campgrounds/<%=campground._id%>/comments/<%=comment._id%>/edit">Edit</a>
-                                <form class="delete-form" action="/campgrounds/<%=campground._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+                               <a class="btn btn-xs btn-warning" href="/a/birrerias/<%=birreria._id%>/comments/<%=comment._id%>/edit">Edit</a>
+                                <form class="delete-form" action="/a/birrerias/<%=birreria._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
                                     <button class="btn btn-xs btn-danger">Borrar</button>
                                 </form>
                             <% } %>
