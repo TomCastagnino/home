@@ -22,5 +22,11 @@ router.get("/trabajos/b", function(req, res) {
   res.render("patatapClone"); 
 });
 
+router.get("/trabajos/c", function(req, res) {
+  res.render("colorGame"); 
+});
+
+
+
 
 module.exports = router;
