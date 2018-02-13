@@ -15,7 +15,11 @@ router.get("/", function(req, res) {
 //////////////////
 
 router.get("/trabajos", function(req, res) {
-   res.render("trabajos"); 
+  res.render("trabajos"); 
+});
+
+router.get("/trabajos/b", function(req, res) {
+  res.render("patatapClone"); 
 });
 
 
