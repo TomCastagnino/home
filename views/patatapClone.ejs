@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="/stylesheets/patatapClone.css">
     <script type="text/javascript" src="/js/lib/paper-full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.7/howler.core.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <script type="text/paperscript" canvas="myCanvas">
 
@@ -199,8 +204,21 @@
 
   </head>
   <body>
+      
+    <nav id="myNavbar" class="navbar fixed-top navbar-expand-sm navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <i class="fab fa-fort-awesome fa-lg myIcons" aria-hidden="true"></i>
+          </a>
+         </div>
+    </nav>
+    
+    <div class="contenedor">
+        <h3 class="myH3">Presioná cualquier letra de la A a la Z</h3>
+        <canvas id="myCanvas" resize></canvas>
+    </div>
+      
 
-    <canvas id="myCanvas" resize></canvas>
 
   </body>
 </html>
