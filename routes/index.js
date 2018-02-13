@@ -10,6 +10,13 @@ router.get("/", function(req, res) {
 });
 
 
+//////////////////
+//PORTFOLIO ROUTES
+//////////////////
+
+router.get("/trabajos", function(req, res) {
+   res.render("trabajos"); 
+});
 
 
 module.exports = router;
