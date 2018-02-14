@@ -54,6 +54,7 @@ function reset() {
   pickedColor = pickColor();
   resetButton.textContent = "Nuevos Colores";
   colorDisplay.textContent = pickedColor;
+  contenedor.style.backgroundColor = "steelblue";
   for (var i = 0; i < squares.length; i++) {
     if (colors[i]) {
       squares[i].style.display = "block";
