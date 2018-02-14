@@ -11,7 +11,7 @@ var express     = require("express"),
 //////////////////
 
 //NEW
-router.get("/new", middleware.isLoggedIn, function(req, res) {
+router.get("/a/new", middleware.isLoggedIn, function(req, res) {
     Birreria.findById(req.params.id, function(err, birreria) {
         if (err) {
             console.log(err);
@@ -22,7 +22,7 @@ router.get("/new", middleware.isLoggedIn, function(req, res) {
 });
 
 //CREATE
-router.post("/", middleware.isLoggedIn, function(req, res) {
+router.post("/a", middleware.isLoggedIn, function(req, res) {
     Birreria.findById(req.params.id, function(err, birreria) {
         if (err) {
        res.redirect("/a/birrerias");
