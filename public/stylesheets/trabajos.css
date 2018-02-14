@@ -48,8 +48,8 @@ img {
 
 
 #texto {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-size: large;
+  font-family: Courier New, Georgia, serif;
+  font-size: larger;
   width: 50%;
   margin: 0;
   padding-top: 25px;
