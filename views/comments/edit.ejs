@@ -1,4 +1,42 @@
-<% include ../partials/header %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>La Birrería</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+
+  </head>
+  <body>
+    <nav id="myNavbar" class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/a" class="navbar-brand">La Birrería</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if(!currentUser) { %>
+              <li> <a href="/a/login">Login</a> </li>
+              <li> <a href="/a/register">Registrarse</a> </li>
+            <% } else { %>
+              <li> <a>Bienvenido <%= currentUser.username %></a> </li>
+              <li> <a href="/a/logout">Logout</a> </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+<%      if (error && error.length > 0) { %>
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+<%      } %>
+<%      if (success && success.length > 0) { %>
+        <div class="alert alert-success" role="alert">
+          <%= success %>
+        </div>
+<%      } %>
+    </div>
 
 <div class="container">
   <div class="row">
