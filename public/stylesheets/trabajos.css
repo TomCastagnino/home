@@ -62,3 +62,27 @@ img {
                0px 18px 23px rgba(0,0,0,0.1);
 }
 
+.grilla_interna {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+#atras {
+  position: relative;
+  color: white;
+}
+
+#adelante {
+  position: relative;
+  color: white;
+}
+
+#flechas {
+  width: 150%;
+  height: 150%;
+  color: black;
+}
+
