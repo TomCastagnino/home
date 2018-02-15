@@ -1,0 +1,37 @@
+<h1>Results Page</h1>
+
+
+<% if (data["Search"] !== undefined) { %>
+<% data["Search"].forEach(function(movie) { %>
+
+          <div class="grilla">
+            <div id="myThumbnail" class="thumbnail">
+              <image src=<%=birreria.image%>></image>
+              <div class="caption">
+                <h4> <%= birreria.name %> </h4>
+              </div>
+              <p>
+                <a href="/a/birrerias/<%=birreria._id%>" class="btn btn-primary">Más Info</a>
+              </p>
+            </div>
+
+    <li>   <%= movie["Title"]; %> - <%=movie["Year"]; %> - <%=movie["Runtime"]; %> <%= movie["Director"]; %> </li> 
+    <li> <img src="<%= movie["Poster"] %>"></img> </li>
+    <%console.log(movie["Title"]); %>
+
+<% }); %>
+
+<% } else {%>
+<h2>Movie not found!</h2>
+
+<% }%>
+
+
+
+0	
+Title	"Harry Potter and the Deathly Hallows: Part 2"
+Year	"2011"
+imdbID	"tt1201607"
+Type	"movie"
+Poster	"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIyZGU4YzUtNDkzYi00ZDRhLTljYzctYTMxMDQ4M2E0Y2YxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+1
