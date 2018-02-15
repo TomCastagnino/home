@@ -14,7 +14,7 @@ middlewareObj.isLoggedIn = function(req, res, next) {
         return next();
     }
     req.flash("error", "Necesitás estar logeado para hacer eso!");
-    res.redirect("/a/login");
+    res.render("../views/login");
 };
 
 middlewareObj.checkBirreriaOwnership = function(req, res, next) {
