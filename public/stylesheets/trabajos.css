@@ -73,11 +73,13 @@ img {
 #atras {
   position: relative;
   color: white;
+  padding-right: 5%;
 }
 
 #adelante {
   position: relative;
   color: white;
+  padding-left: 5%;
 }
 
 #flechas {
