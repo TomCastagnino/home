@@ -13,10 +13,11 @@ canvas {
 
 .myIcons {
     color: white;
+    transform: scale(1.3);
 }
 
 #myNavbar {
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .myH3 {

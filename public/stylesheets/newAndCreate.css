@@ -5,3 +5,15 @@ body {
 #myNavbar {
     background-color: Snow;
 }
+
+.linksTexto {
+    font-size: large;
+    color: black;
+    padding: 0;
+    font-weight: bold;
+}
+
+#myIcons {
+    padding-top: 15%;
+    transform: scale(1.3);
+}

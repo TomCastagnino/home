@@ -21,3 +21,12 @@ input[type=text] {
     font-family: Courier New, monospace, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-style: italic
 }
+
+.myIcons {
+    top: 0;
+    left: 0;
+    padding-top: 1.5%;
+    padding-left: 1.5%;
+    color: white;
+    transform: scale(1.3);
+}
