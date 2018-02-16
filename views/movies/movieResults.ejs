@@ -4,56 +4,80 @@
 
         <meta charset="utf-8">
         <link rel="icon" href="/images/TCfavicon.png">
-        <title>Tomas Castagnino - {trabajos}</title>
+        <title>Tomas Castagnino - Movie Database</title>
     
         <link rel="stylesheet" href="/stylesheets/movieResults.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     </head>
     
-    <body>
-    
-
-        <div class ="container">
-            
+    <body id="myBody">
         
-        
-        <h1>Results Page</h1>
-        
-        <div class="row text-center" >
-            
-        <% if (data["Search"] !== undefined) { %>
-        <% data["Search"].forEach(function(movie) { %>
-        
- 
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="card border-dark mb-3 bg-light" style="max-width: 18rem;">
-                      <image class=".img-fluid card-img-top" src="<%= movie["Poster"] %>" style=" max-height: 20rem;"></image>
-                      <div class="card-header">
-                          <%= movie["Title"]%>
-                      </div>
-                      <div class="card-body text-secondary">
-                            <h6class="card-title">Year: <%=movie["Year"] %> </h6>
-                            <p class="card-text"></p>
-                            <a href="/a/birrerias/<%= %>" class="btn btn-primary">Más Info</a>
-                      </div>
+        <div id="myHeader">
+            <img class="ui centered large image" src="../../images/movies.png">
+            <h1 id="results" class="ui huge center aligned header">
+                <div class="content">
+                    Movie Results 
+                    <div class="sub header"> 
+                        <% if (data["Search"] !== undefined) { %>
+                            <%= data["Search"].length%> products meet your search criteria
+                        <% } else { %>
+                            No product meets your search criteria
+                        <% } %> 
                     </div>
                 </div>
-
-        <% }); %>
+            </h1>
         
-        <% } else {%>
-        <h2>Movie not found!</h2>
-        
-        <% }%>
+            <div class="container">
+                <div id="myDivider" class="ui horizontal divider">
+                    "<%=search%>"
+                </div>
+            </div>
         
         </div>
 
+        
+
+        
+        
+        <div class="ui stackable four column grid container">
+            <% if (data["Search"] !== undefined) { %>
+                <% data["Search"].forEach(function(movie) { %>
+                    <div class="column">
+                        <div class="ui special cards">
+                          <div class="card">
+                            <div class="blurring dimmable image">
+                              <div class="ui dimmer">
+                                <div class="content">
+                                  <div class="center">
+                                    <div class="ui inverted button">
+                                        <a src="/trabajos/d/info/<%= movie["imdbID"]%>">Info</a> 
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <image class="fotos" src="<%= movie["Poster"]%>"></image>
+                            </div>
+                            <div id="textBox" class="content">
+                              <h4 class="header center"><%= movie["Title"]%></h4>
+                              <div class="meta">
+                                <span class="date">Year: <%=movie["Year"] %></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
         </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
+        <script src="/js/movieResults.js" charset="utf-8"></script>
 
     </body>
 </html>
+
