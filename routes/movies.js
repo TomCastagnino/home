@@ -30,8 +30,8 @@ router.get("/trabajos/d/info/:id", function (req, res) {
     var fullPlot = "&plot=full";
     request(url+imdb+fullPlot+process.env.MOVIE_KEY , function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            var data = JSON.parse(body);
-            res.render("movies/movieInfo", {data: data});
+            var movie = JSON.parse(body);
+            res.render("movies/movieInfo", {movie: movie});
         }
     });
 });

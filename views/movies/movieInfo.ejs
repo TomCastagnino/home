@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <link rel="icon" href="/images/TCfavicon.png">
+        <title>Tomas Castagnino - Movie Database</title>
+    
+        <link rel="stylesheet" href="/stylesheets/movieInfo.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    </head>
+  
+    <body id="myBody">
+        <div id="contenedor" class="ui container">
+            
+            <div class="ui two column centered very relaxed stackable grid">
+                <div class="left floated column ">
+                    <img class="ui centered large rounded image" src="<%= movie["Poster"]%>">
+                    <div class="ui piled secondary segment">
+                        <h4 class="ui header centered"><%= movie["Title"]%></h4>
+                        <p><%=movie["Plot"]%></p>
+                        <br>
+                        <div>
+                            Rating: <div class="ui rating" data-rating="<%= Math.round(((movie["Metascore"])/2)/10) %>" data-max-rating="5"></div> 
+                            <%=movie["Metascore"]%>/100
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="right floated column">
+                    
+                    <img id="foto" class="ui centered small image" src="/images/movies.png">
+                    
+                    <div class="ui raised segments">
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Rated:</span> <%=movie["Rated"]%></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Released:</span> <%=movie["Released"] %></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Runtime:</span> <%=movie["Runtime"]%>	</p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Genre:</span> <%=movie["Genre"]%></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Country:</span> <%=movie["Country"]%></p>
+                        </div>                        
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Awards:</span> <%=movie["Awards"]%></p>
+                        </div>
+                    </div>
+                    
+                    <div class="ui raised segments">
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Director:</span> <%=movie["Director"]%></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Writer:</span> <%=movie["Writer"]%></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Actors:</span> <%=movie["Actors"]%></p>
+                        </div>
+                    </div>                    
+                    
+                    <div class="ui raised segments">
+                        <div class="ui center aligned secondary segment">
+                            <p><span class="texto">Ratings</p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Internet Movie Database:</span> <%=movie["Ratings"][0].Value%></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Rotten Tomatoes:</span> <%=movie["Ratings"][1].Value%></p>
+                        </div>
+                        <div class="ui secondary segment">
+                            <p><span class="texto">Metacritic:</span> <%=movie["Ratings"][2].Value%></p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+
+        
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
+        <script src="/js/movieInfo.js" charset="utf-8"></script>
+        
+    </body>
+  
+</html>
+
+
+        <!--    <div class="ui card centered">-->
+        <!--  <div class="image">-->
+        <!--    <img src="<%= movie["Poster"]%>">-->
+        <!--  </div>-->
+        <!--  <div class="content">-->
+        <!--    <a class="header"><%= movie["Title"]%></a>-->
+        <!--    <div class="meta">-->
+        <!--      <span class="date">Released: <%=movie["Released"] %></span>-->
+        <!--    </div>-->
+        <!--    <div class="description">-->
+        <!--      <%= movie["Plot"]%>-->
+        <!--    </div>-->
+        <!--  </div>-->
+        <!--  <div class="extra content">-->
+        <!--    <a>-->
+        <!--      <i class="user icon"></i>-->
+        <!--      22 Friends-->
+        <!--    </a>-->
+        <!--  </div>-->
+        <!--    <div class="extra">-->
+        <!--        Rating:-->
+        <!--        <div class="ui rating" data-rating="<%= Math.round(((movie["Metascore"])/2)/10) %>" data-max-rating="5"></div>-->
+        <!--        <%=movie["Metascore"]%>/100-->
+        <!--    </div>-->
+        <!--</div>-->
+        <!--</div>-->
