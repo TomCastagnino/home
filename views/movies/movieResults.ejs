@@ -24,22 +24,26 @@
         
         <h1>Results Page</h1>
         
-        <div class="row text-center" style="display: flex; flex-wrap:wrap;" >
+        <div class="row text-center" >
             
         <% if (data["Search"] !== undefined) { %>
         <% data["Search"].forEach(function(movie) { %>
         
-                <div class="col-md-3 col-sm-6">  
-                    <div id="myThumbnail" class="thumbnail">
-                      <image src="<%= movie["Poster"] %>"></image>
-                      <div class="caption">
-                        <h4> <%= movie["Title"]%> - <%=movie["Year"] %>  </h4>
+ 
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="card border-dark mb-3 bg-light" style="max-width: 18rem;">
+                      <image class=".img-fluid card-img-top" src="<%= movie["Poster"] %>" style=" max-height: 20rem;"></image>
+                      <div class="card-header">
+                          <%= movie["Title"]%>
                       </div>
-                      <p>
-                        <a href="/a/birrerias/<%= %>" class="btn btn-primary">Más Info</a>
-                      </p>
+                      <div class="card-body text-secondary">
+                            <h6class="card-title">Year: <%=movie["Year"] %> </h6>
+                            <p class="card-text"></p>
+                            <a href="/a/birrerias/<%= %>" class="btn btn-primary">Más Info</a>
+                      </div>
                     </div>
                 </div>
+
         <% }); %>
         
         <% } else {%>
