@@ -7,9 +7,10 @@ $('.carousel').on('slide.bs.carousel', function () {
     $('#texto').html("Un juego para aprender a identificar RGBs. <br>{HTML, CSS, Vainilla JS}");
   }
   if ($('#tercero').hasClass("active")) {
-    $('#texto').html("Un sitio para compartir cervecerías.  <br>{RESTful routes, base de datos, autenticación, Google APIs y Bootstrap}");
+    $('#texto').html("Base de datos de películas.  <br>{Semantic UI, APIs}");
     } 
   if ($('#cuarto').hasClass("active")) {
-    $('#texto').html("Base de datos de películas.  <br>{Semantic UI, APIs}");
+    $('#texto').html("Un sitio para compartir cervecerías.  <br>{RESTful routes, base de datos, autenticación, Google APIs y Bootstrap}");
     }
 });
+
