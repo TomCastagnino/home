@@ -8,5 +8,8 @@ $('.carousel').on('slide.bs.carousel', function () {
   }
   if ($('#tercero').hasClass("active")) {
     $('#texto').html("Un sitio para compartir cervecerías.  <br>{RESTful routes, base de datos, autenticación, Google APIs y Bootstrap}");
+    } 
+  if ($('#cuarto').hasClass("active")) {
+    $('#texto').html("Base de datos de películas.  <br>{Semantic UI, APIs}");
     }
 });
