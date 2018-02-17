@@ -4,16 +4,12 @@ body, html {
 }
 
 .myBody{
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #85144B;
 }
 
 #myNavbar {
   padding-top: 15px;
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #85144B;
 }
 
 .icono {
@@ -25,11 +21,7 @@ body, html {
 }
 
 .myIcons {
-  color: white;
-}
-
-.home {
-  transform: scale(1.3);
+  color: #FF851B;
 }
 
 .grilla {
@@ -47,7 +39,6 @@ body, html {
   margin: 0;
   padding: 0;
   border: 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 
@@ -57,10 +48,10 @@ body, html {
   font-size: larger;
   width: 50%;
   margin: 0;
-  padding-top: 50px;
+  padding-top: 85px;
   border: 0;
   text-align: center;
-  color: white;
+  color: #FF851B;
   animation: blur-text 15s infinite ease-in;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                0px 8px 13px rgba(0,0,0,0.1),
@@ -76,16 +67,39 @@ body, html {
 
 #atras {
   position: relative;
-  color: white;
+  color: #FF851B;
   padding-right: 5%;
 }
 
 #adelante {
   position: relative;
-  color: white;
+  color: #FF851B;
   padding-left: 5%;
 }
 
 #indicador {
-  top: 105%;
+  top: 107%;
+  background: #1a040f;
 }
+
+#indicador .active {
+  background: #FF851B;
+}
+
+#workCarousel {
+  border: solid #FF851B 3px;
+  border-radius: 5%;
+  box-shadow: 10px 10px 10px -1px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 10px 10px 10px -1px rgba(0,0,0,0.57);
+  -moz-box-shadow: 10px 10px 10px -1px rgba(0,0,0,0.57);
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1.75s ease-in-out;
+}
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
+

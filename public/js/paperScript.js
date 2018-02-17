@@ -33,7 +33,7 @@ Spring.prototype.update = function() {
 
 function createPath(strength) {
 	var path = new Path({
-		fillColor: 'black'
+		fillColor: '#30071b'
 	});
 	springs = [];
 	for (var i = 0; i <= values.amount; i++) {

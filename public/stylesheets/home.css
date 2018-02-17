@@ -4,25 +4,20 @@ body, html {
 }
 
 .myBody{
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #85144B;
 }
 
 #myNavbar {
   padding-top: 15px;
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #85144B;
 }
-
 
 .icono {
   padding-right: 15px;
 }
 
 .myIcons {
-  color: white;
+  color: #FF851B;
 }
 
 .home {
@@ -39,9 +34,7 @@ canvas {
   width: 100%;
   height: 40%;
   bottom: 0;
-  background: #BBD2C5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #85144B;
 }
 
 h1 {
@@ -60,7 +53,7 @@ h1 {
   border: 0;
   text-align: center;
   word-spacing: 1px;
-  color: white;
+  color: #FF851B;
   animation: blur-text 15s infinite ease-in;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                0px 8px 13px rgba(0,0,0,0.1),
