@@ -95,11 +95,9 @@ body, html {
 }
 
 .carousel-fade .carousel-item {
-  opacity: 0;
-  transition: opacity 1.75s ease-in-out;
+  opacity: 1;
+  transition: opacity;
 }
 .carousel-fade .carousel-item.active {
   opacity: 1;
 }
-
-

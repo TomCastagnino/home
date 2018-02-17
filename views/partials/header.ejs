@@ -3,28 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>La Birrería</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" href="/stylesheets/main.css">
   </head>
   <body>
     <nav id="myNavbar" class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-header" href="/">
-            <i aria-hidden="true"><img id="myIcons" src="/images/homeBlack.png"></i>
-          </a>
+      <a class="navbar-brand" href="/">
+        <i id="homeIcon" class="fas fa-home fa-2x " aria-hidden="true"></i>
+      </a>
         </div>
-        <div class="collapse navbar-collapse">
+
           <ul class="nav navbar-nav navbar-right">
             <% if(!currentUser) { %>
               <li> <a class="linksTexto" href="/a/login">Login</a> </li>
               <li> <a class="linksTexto" href="/a/register">Registrarse</a> </li>
             <% } else { %>
-              <li> <a>Bienvenido <%= currentUser.username %></a> </li>
-              <li> <a href="/a/logout">Logout</a> </li>
+              <li> <a class="linksTexto">Bienvenido <%= currentUser.username %></a> </li>
+              <li> <a class="linksTexto" href="/a/logout">Logout</a> </li>
             <% } %>
           </ul>
-        </div>
+
       </div>
     </nav>
     <div class="container">
