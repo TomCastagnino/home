@@ -83,3 +83,7 @@ body {
 .no-cssanimations .slideshow li {
 	opacity: 1;
 }
+
+@-ms-viewport{
+  width: device-width;
+}

@@ -38,3 +38,7 @@ canvas {
     background-color: black;
     height: 100%;
 }
+
+@-ms-viewport{
+  width: device-width;
+}

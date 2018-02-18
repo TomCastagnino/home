@@ -26,6 +26,13 @@ router.get("/trabajos/c", function(req, res) {
   res.render("colorGame"); 
 });
 
+router.get("/trabajos/e", function(req, res) {
+  res.render("juegos/walker"); 
+});
+
+router.get("/trabajos/f", function(req, res) {
+  res.render("juegos/flappy"); 
+});
 
 
 

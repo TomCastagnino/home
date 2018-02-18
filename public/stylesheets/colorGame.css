@@ -96,3 +96,6 @@ button:hover {
     padding: 1.5rem 2rem;
 }
 
+@-ms-viewport{
+  width: device-width;
+}

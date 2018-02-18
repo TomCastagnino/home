@@ -101,3 +101,7 @@ body, html {
 .carousel-fade .carousel-item.active {
   opacity: 1;
 }
+
+@-ms-viewport{
+  width: device-width;
+}

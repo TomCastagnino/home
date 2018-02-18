@@ -1,0 +1,42 @@
+.contenedor {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 9%;
+}
+
+iframe {
+    border: solid #FF851B 3px;      
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.myBody{
+  background: #85144B;
+}
+
+#myNavbar {
+  padding-top: 15px;
+  background: #85144B;
+}
+
+.icono {
+  padding-right: 15px;
+}
+
+.myIcons {
+  color: #FF851B;
+}
+
+#about, #work{
+  font-size: larger;
+}
+
+
+@-ms-viewport{
+  width: device-width;
+}

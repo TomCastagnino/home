@@ -17,3 +17,7 @@ body {
     padding-top: 15%;
     transform: scale(1.3);
 }
+
+@-ms-viewport{
+  width: device-width;
+}
