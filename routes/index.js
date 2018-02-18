@@ -34,6 +34,14 @@ router.get("/trabajos/f", function(req, res) {
   res.render("juegos/flappy"); 
 });
 
+////////
+//ABOUT
+////////
+
+router.get("/about", function(req, res) {
+  res.render("about"); 
+});
+
 
 
 module.exports = router;
