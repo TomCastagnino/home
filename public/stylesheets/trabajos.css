@@ -32,6 +32,12 @@ body, html {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 500px) {
+    .grilla {
+          padding-top: 35%;
+    }
+}
+
 .imagenes {
   border-radius: 5%;
   width: 50%;

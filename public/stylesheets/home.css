@@ -60,6 +60,12 @@ h1 {
                0px 18px 23px rgba(0,0,0,0.1);
 }
 
+@media only screen and (max-width: 500px) {
+    h1 {
+        letter-spacing: 1px;
+    }
+}
+
 /*.works {*/
 /*  font-family: "Lucida Console", Monaco, monospace;*/
 /*  font-size: 1.5rem;*/
