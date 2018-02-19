@@ -39,6 +39,15 @@ color: #cc6a15;
     border: solid #FF851B 3px;
 }
 
+@media only screen and (max-width: 500px) {
+    .imagenPeque {
+        max-width: 200px;
+    }
+    .container {
+    padding-top: 5%;
+}
+}
+
 .myText {
     text-align: center;
     max-width: 300px;
