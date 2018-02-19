@@ -47,6 +47,33 @@ color: #cc6a15;
 p {
     text-align: center;
     font-size: large;
+    font-family: 'Inconsolata', monospace;
+    letter-spacing: 1px;
+}
+
+.mail {
+    letter-spacing: 3px;
+    -webkit-animation: temblar 2s ease-in infinite;
+    animation: temblar 2s ease-in infinite;
+}
+
+@keyframes temblar {
+  48%, 62% {
+    -webkit-transform: scale(1.0, 1.0);
+            transform: scale(1.0, 1.0)
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9)
+  }
+  56% {
+    -webkit-transform: scale(0.9, 1.1) translate(0, -5px);
+            transform: scale(0.9, 1.1) translate(0, -5px)
+  }
+  59% {
+    -webkit-transform: scale(1.0, 1.0) translate(0, -3px);
+            transform: scale(1.0, 1.0) translate(0, -3px)
+  }
 }
 
 
@@ -54,8 +81,3 @@ p {
   width: device-width;
 }
 
-/*@media all and (max-width: 500px) {*/
-/*  .contenedor {*/
-/*    flex-direction: column;*/
-/*  }*/
-/*}*/
