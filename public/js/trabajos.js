@@ -13,7 +13,7 @@ $('.carousel').on('slid.bs.carousel', function () {
     $('#texto').html("Base de datos de películas. <br>{Semantic UI, APIs}");
     }   
   if ($('#quinto').hasClass("active")) {
-    $('#texto').html("Un juego para saltar nubes. <br>{Unity, C#}");
+    $('#texto').html("Usá las flechas del teclado para controlar al personaje y saltar nubes. <br>{Unity, C#}");
     }   
   if ($('#sexto').hasClass("active")) {
     $('#texto').html("Un clon del Flappy Bird.  <br>{Unity, C#}");
