@@ -38,9 +38,8 @@ body, html {
     }
     #texto {
       font-size: medium;
-      text-align: left;
-      width: 100%;
-      line-height: 95%;
+      text-align: left !Important;
+      width: 100% !Important;
     }
 }
 
