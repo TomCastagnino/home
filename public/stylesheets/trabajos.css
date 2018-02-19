@@ -36,6 +36,10 @@ body, html {
     .grilla {
           padding-top: 35%;
     }
+    #texto {
+      font-size: large;
+      
+    }
 }
 
 .imagenes {
