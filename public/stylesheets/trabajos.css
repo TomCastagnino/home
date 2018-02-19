@@ -32,14 +32,15 @@ body, html {
   flex-direction: column;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     .grilla {
           padding-top: 35%;
     }
     #texto {
       font-size: medium;
       text-align: left;
-      width: 70%;
+      width: 100%;
+      line-height: 95%;
     }
 }
 
