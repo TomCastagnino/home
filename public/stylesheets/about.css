@@ -41,7 +41,7 @@ color: #cc6a15;
 
 @media only screen and (max-width: 500px) {
     .imagenPeque {
-        max-width: 200px;
+        max-width: 350px;
     }
     .container {
     padding-top: 5%;
