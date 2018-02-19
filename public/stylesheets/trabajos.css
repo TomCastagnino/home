@@ -50,11 +50,11 @@ body, html {
 
 
 #texto {
-  font-family: Courier New, Georgia, serif;
+  font-family: 'Inconsolata', monospace;
   font-size: larger;
   width: 50%;
   margin: 0;
-  padding-top: 85px;
+  padding-top: 50px;
   border: 0;
   text-align: center;
   color: #FF851B;
