@@ -14,7 +14,8 @@ var commentRoutes   = require("./birreria/routes/comments"),
     birreriaRoutes  = require("./birreria/routes/birrerias"),
     indexRoutes     = require("./birreria/routes/index"),
     homeRoutes      = require("./routes/index"),
-    movieRoutes     = require("./routes/movies");
+    movieRoutes     = require("./routes/movies"),
+    errorRoutes     = require("./routes/error.js");
  
 
 mongoose.connect(process.env.DATABASEURL);
@@ -55,6 +56,7 @@ app.use(indexRoutes);
 app.use(birreriaRoutes);
 app.use("/a/birrerias/:id/comments", commentRoutes);
 app.use(movieRoutes);
+app.use(errorRoutes);
 
 ////////////////////////////////////////////////////
 //TELL EXPRESS TO LISTEN FOR REQUESTS (START SERVER)
