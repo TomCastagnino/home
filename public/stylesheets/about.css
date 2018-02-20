@@ -36,7 +36,15 @@ color: #cc6a15;
 
 .imagenPeque {
     max-width: 450px;
-    border: solid #FF851B 3px;
+    border-bottom: solid #FF851B 3px;
+}
+
+.imagenDerecha {
+  border-left: solid #FF851B 3px;
+}
+
+.imagenIzquierda {
+  border-right: solid #FF851B 3px;
 }
 
 @media only screen and (max-width: 500px) {
