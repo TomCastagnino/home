@@ -18,5 +18,8 @@ $('.carousel').on('slid.bs.carousel', function () {
   if ($('#sexto').hasClass("active")) {
     $('#texto').html("Un clon del Flappy Bird.  <br>{Unity, C#}");
     } 
+  if ($('#septimo').hasClass("active")) {
+    $('#texto').html("GIFs de gatos generados al azar.  <br>{AJAX, APIs}");
+    } 
 });
 
