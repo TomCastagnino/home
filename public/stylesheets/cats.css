@@ -2,6 +2,19 @@ html {
   background: #EAEBF0;
 }
 
+#myNavbar {
+  padding-top: 15px;
+  background: #EAEBF0;
+}
+
+.icono {
+  padding-right: 15px;
+}
+
+#about, #work{
+  font-size: larger;
+}
+
 .gif {
   height: 400px;
   border: black solid 3px;
