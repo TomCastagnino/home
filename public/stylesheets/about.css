@@ -54,6 +54,9 @@ font-size: medium;
     }
     .container {
     padding-top: 2%;
+  }
+  .row {
+    padding:35px 0;
 }
 }
 
