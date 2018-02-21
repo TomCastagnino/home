@@ -15,25 +15,42 @@ html {
   font-size: larger;
 }
 
-.gif {
+#myBody {
+    background: #EAEBF0;
+}
+
+h1 {
+    font-family: 'Inconsolata', monospace;
+}
+
+#photo {
   height: 400px;
   border: black solid 3px;
 }
 
-.header{
-  background-image: url("cat.jpg");
-  position: absolute;
-  width: 400px;
-  height: 220px;
-  top: 0;
-  right: 0;
-}
-.container {
+.contenedor {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-button {
-  margin: 20px;
+#btn {
+  margin-top: 10px;
+}
+
+.container {
+    padding-top: 4%;
+}
+
+@media only screen and (max-width: 800px) {
+    #photo {
+        max-width: 400px;
+    }
+    .container {
+    padding-top: 14%;
+}
+}
+
+@-ms-viewport{
+  width: device-width;
 }

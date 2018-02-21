@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>Cat App</title>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
-    <link rel="stylesheet" href="cats.css">
+    <link rel="stylesheet" href="/stylesheets/cats.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
           crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
-  <body>
+  <body id="myBody">
       
     <nav id="myNavbar" class="navbar fixed-top navbar-expand-sm navbar-light">
     <div class="container-fluid">
@@ -54,15 +54,18 @@
       
       
     <div class="container">
-  <h1>Dame un gato!</h1>
-  <img src="catsSmall.png" alt="">
-  <a href="http://thecatapi.com"><img class="gif" src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
-  <button id="btn">Quiero!</button>
+        <div class="contenedor">
+            <h1>Dame un gato!</h1>
+  <img src="/images/catsSmall.png" alt="">
+  <a href="http://thecatapi.com"><img id="photo" src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+  <button class="btn btn-outline-dark btn-lg" id="btn">Más!</button>
+        </div>
+  
 </div>
 
 
 
-  <script src="cats.js" charset="utf-8"></script>
+  
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -73,4 +76,5 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   </body>
+  <script src="/js/cats.js" charset="utf-8"></script>
 </html>
