@@ -34,6 +34,10 @@ router.get("/trabajos/f", function(req, res) {
   res.render("juegos/flappy"); 
 });
 
+router.get("/trabajos/g", function(req, res) {
+  res.render("cats"); 
+});
+
 ////////
 //ABOUT
 ////////
