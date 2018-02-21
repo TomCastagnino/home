@@ -9,7 +9,7 @@ button.addEventListener("click", function() {
       var source = xml.getElementsByTagName("source_url");
       var  innerSource = source[0]["innerHTML"];
       var imageId = innerSource.substring(21);
-      img.src = "https://thecatapi.com/api/images/get" + imageId + "&type=gif";
+      img.src = "https://thecatapi.com/api/images/get" + imageId + "&type=gif&size=small";
     }
   }
   XHR.open("GET", "https://thecatapi.com/api/images/get?type=gif&format=xml");

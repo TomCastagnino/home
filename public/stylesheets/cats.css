@@ -24,8 +24,11 @@ h1 {
 }
 
 #photo {
-  height: 400px;
   border: black solid 3px;
+}
+
+#gatos {
+    max-width: 230px;
 }
 
 .contenedor {
@@ -44,10 +47,10 @@ h1 {
 
 @media only screen and (max-width: 800px) {
     #photo {
-        max-width: 400px;
+        max-width: 300px;
     }
     .container {
-    padding-top: 14%;
+    padding-top: 16%;
 }
 }
 
