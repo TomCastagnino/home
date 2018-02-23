@@ -45,6 +45,11 @@ h1 {
     padding-top: 4%;
 }
 
+#link {
+  color: black;
+  margin-top: 70px; 
+}
+
 @media only screen and (max-width: 800px) {
     #photo {
         max-width: 300px;
