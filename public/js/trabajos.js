@@ -20,6 +20,9 @@ $('.carousel').on('slid.bs.carousel', function () {
     } 
   if ($('#septimo').hasClass("active")) {
     $('#texto').html("GIFs de gatos generados al azar.  <br>{AJAX, APIs}");
+    }   
+  if ($('#octavo').hasClass("active")) {
+    $('#texto').html("Censo de detenidos hasta el 2016 <br>{D3 y TopoJson}");
     } 
 });
 
